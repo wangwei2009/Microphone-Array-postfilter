@@ -1,5 +1,4 @@
 # microphone array postfilter
-Generalized poster-filter based on noise filed coherence
 
 
 refer to 
