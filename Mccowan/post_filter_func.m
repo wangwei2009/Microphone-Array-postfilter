@@ -19,9 +19,9 @@ M = N;
 
 
 % periodic window for spectral analysis
-window = hamming(frameLength+1);
+window = sqrt(hann(frameLength+1));
 win = window(1:frameLength);
-win_scale = 1.08;
+win_scale = 1;
 
 
 P_len = N_FFT/2+1;
@@ -116,7 +116,7 @@ for p = 1:Inc:length(x(:,1))-N_FFT
     s_est = iX(1:N_FFT);
     
     % keep the signal
-    z(p:p+N_FFT-1) = z(p:p+N_FFT-1) + s_est;
+    z(p:p+N_FFT-1) = z(p:p+N_FFT-1) + s_est.*win';
 
 end
 

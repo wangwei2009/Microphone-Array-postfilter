@@ -29,10 +29,10 @@ N = size(x,2);        %Channels
 M = N;
 angle = [197,90]/180*pi;
 r = 0.07;
-frameLength = 400;
-overlap = 300;
+frameLength = 256;
+overlap = 128;
 inc = frameLength - overlap;
-N_FFT = 512;
+N_FFT = 256;
 
 P_len = N_FFT/2+1;
 Pxii_pre = ones(N,P_len);
